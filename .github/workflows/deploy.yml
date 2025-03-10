@@ -15,7 +15,7 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/pages/projects/ymjk/deployments" \
+          curl -X POST "https://api.cloudflare.com/client/v4/accounts/11c06d778a8744240af046b52f982fc1/pages/projects/ymjk/deployments" \
           -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
           -H "Content-Type: application/json" \
           --data '{}'
