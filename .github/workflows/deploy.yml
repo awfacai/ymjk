@@ -2,8 +2,8 @@ name: Deploy to Cloudflare Pages
 
 on:
   schedule:
-    - cron: "0 3 * * *"  # 每天 UTC 时间 03:00 运行
-  workflow_dispatch:  # 允许手动触发
+    - cron: "0 3 * * *"  # 每天 UTC 03:00（北京时间 11:00）自动部署
+  workflow_dispatch:  # 允许手动触发部署
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/pages/projects/YOUR_PROJECT/deployments" \
+          curl -X POST "https://api.cloudflare.com/client/v4/pages/projects/ymjk/deployments" \
           -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
           -H "Content-Type: application/json" \
           --data '{}'
