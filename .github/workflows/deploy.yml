@@ -1,14 +1,19 @@
-name: Scheduled Deploy
+name: Deploy to Cloudflare Pages
+
 on:
   schedule:
-    - cron: "0 0 * * *"  # 每天 00:00 触发
-  workflow_dispatch:   # 手动触发部署
+    - cron: "0 3 * * *"  # 每天 UTC 时间 03:00 运行
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Trigger Cloudflare Pages Deployment
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/pages/projects/YOUR_PROJECT/deployments" \
           -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
