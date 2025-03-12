@@ -114,7 +114,7 @@ async function editDomainInKV(env, updatedDomainInfo) {
 
 // 生成密码验证页面
 async function generatePasswordPage() {
-  const siteIcon = 'https://pan.811520.xyz/icon/domain.png';
+  const siteIcon = 'https://lh3.googleusercontent.com/ogw/AF2bZygz4H_gdUKrM6LQRuI5uDQN0V2yY9rt84PKn9804WA_qA';
   const bgimgURL = 'https://bing.img.run/1920x1080.php';
   
   return `
@@ -219,7 +219,7 @@ async function generatePasswordPage() {
 
 // 生成域名列表页面
 async function generateDomainListPage(domains, SITENAME) {
-  const siteIcon = 'https://pan.811520.xyz/icon/domain.png';
+  const siteIcon = 'https://lh3.googleusercontent.com/ogw/AF2bZygz4H_gdUKrM6LQRuI5uDQN0V2yY9rt84PKn9804WA_qA';
   const bgimgURL = 'https://bing.img.run/1920x1080.php';
   const rows = await Promise.all(domains.map(async info => {
     const registrationDate = new Date(info.registrationDate);
@@ -515,8 +515,7 @@ async function generateDomainListPage(domains, SITENAME) {
       <div class="footer">
         <p>
           Copyright © 2025 Yutian81&nbsp;&nbsp;&nbsp;|
-          <a href="https://github.com/yutian81/domain-check" target="_blank">GitHub Repository</a>&nbsp;&nbsp;&nbsp;|
-          <a href="https://blog.811520.xyz/" target="_blank">青云志博客</a>
+          <a href="https://rvv.pp.ua/" target="_blank">AWEI</a>
         </p>
       </div>
       <script>
