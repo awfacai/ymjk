@@ -514,7 +514,7 @@ async function generateDomainListPage(domains, SITENAME) {
       
       <div class="footer">
         <p>
-          Copyright © 2025 Yutian81&nbsp;&nbsp;&nbsp;|
+          Copyright © 2025 awei&nbsp;&nbsp;&nbsp;|
           <a href="https://rvv.pp.ua/" target="_blank">AWEI</a>
         </p>
       </div>
@@ -646,7 +646,7 @@ export default {
           const token = btoa(Date.now() + ':' + Math.random());
           
           // 存储令牌（有效期10分钟）
-          await env.SECRET_KV.put('auth_token:' + token, 'valid', { expirationTtl: 600 });
+          await env.SECRET_KV.put('auth_token:' + token, 'valid', { expirationTtl: 2592000 });
           
           return new Response(JSON.stringify({ 
             success: true, 
